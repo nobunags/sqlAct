@@ -16,8 +16,8 @@
 </style>
 </head>
 <body>
-<h1>Register here!</h1>
-<p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
+<h1>registration here!</h1>
+<p>Fill in your name and email address, then click <strong>Submit</strong> to registration.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       Email <input type="text" name="email" id="email"/></br>
@@ -26,10 +26,10 @@
 <?php
 
 // DB connection info
-$host = "tcp:fd6wi0o00y.database.windows.net,1433";
-$user = "joseph@fd6wi0o00y";
+$host = "tcp:z9wkanxj2d.database.windows.net,1433";
+$user = "joseph@z9wkanxj2d";
 $pwd = "ie804tmng3!";
-$db = "register";
+$db = "registration";
 // Connect to database.
 try {
     $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
@@ -46,7 +46,7 @@ try {
     $email = $_POST['email'];
     $date = date("Y-m-d");
     // Insert data
-    $sql_insert = "INSERT INTO register_tbl (name, email, date) 
+    $sql_insert = "INSERT INTO registration_tbl (name, email, date) 
                    VALUES (?,?,?)";
     $stmt = $conn->prepare($sql_insert);
     $stmt->bindValue(1, $name);
@@ -57,15 +57,15 @@ try {
 catch(Exception $e) {
     die(var_dump($e));
 }
-echo "<h3>Your're registered!</h3>";
+echo "<h3>Your're registrationed!</h3>";
 }
 
 
-$sql_select = "SELECT * FROM register_tbl";
+$sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) {
-    echo "<h2>People who are registered:</h2>";
+    echo "<h2>People who are registrationed:</h2>";
     echo "<table>";
     echo "<tr><th>Name</th>";
     echo "<th>Email</th>";
@@ -77,7 +77,7 @@ if(count($registrants) > 0) {
     }
     echo "</table>";
 } else {
-    echo "<h3>No one is currently registered.</h3>";
+    echo "<h3>No one is currently registrationed.</h3>";
 }
 
 

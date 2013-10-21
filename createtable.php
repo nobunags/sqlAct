@@ -1,7 +1,7 @@
 <?php
 // DB connection info
-$host = "tcp:fd6wi0o00y.database.windows.net,1433";
-$user = "joseph";
+$host = "tcp:z9wkanxj2d.database.windows.net,1433";
+$user = "joseph@z9wkanxj2d";
 $pwd = "ie804tmng3!";
 $db = "register";
 try{
