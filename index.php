@@ -16,8 +16,8 @@
 </style>
 </head>
 <body>
-<h1>registration here!</h1>
-<p>Fill in your name and email address, then click <strong>Submit</strong> to registration.</p>
+<h1>Register here!</h1>
+<p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       Email <input type="text" name="email" id="email"/></br>
@@ -57,7 +57,7 @@ try {
 catch(Exception $e) {
     die(var_dump($e));
 }
-echo "<h3>Your're registrationed!</h3>";
+echo "<h3>Your're registered!</h3>";
 }
 
 
@@ -65,7 +65,7 @@ $sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 if(count($registrants) > 0) {
-    echo "<h2>People who are registrationed:</h2>";
+    echo "<h2>People who are registered:</h2>";
     echo "<table>";
     echo "<tr><th>Name</th>";
     echo "<th>Email</th>";
@@ -77,7 +77,7 @@ if(count($registrants) > 0) {
     }
     echo "</table>";
 } else {
-    echo "<h3>No one is currently registrationed.</h3>";
+    echo "<h3>No one is currently registered.</h3>";
 }
 
 

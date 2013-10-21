@@ -3,11 +3,11 @@
 $host = "tcp:z9wkanxj2d.database.windows.net,1433";
 $user = "joseph@z9wkanxj2d";
 $pwd = "ie804tmng3!";
-$db = "register";
+$db = "registration";
 try{
     $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $sql = "CREATE TABLE register_tbl(
+    $sql = "CREATE TABLE registration_tbl(
     id INT NOT NULL IDENTITY(1,1) 
     PRIMARY KEY(id),
     name VARCHAR(30),
