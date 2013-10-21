@@ -29,7 +29,7 @@
 $host = "tcp:fd6wi0o00y.database.windows.net,1433";
 $user = "joseph@fd6wi0o00y";
 $pwd = "`STRagintcon913";
-$db = "registration";
+$db = "sqlactiaucbh76of";
 // Connect to database.
 try {
     $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
