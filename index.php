@@ -29,7 +29,7 @@
 $host = "tcp:z9wkanxj2d.database.windows.net,1433";
 $user = "joseph@z9wkanxj2d";
 $pwd = "ie804tmng3!";
-$db = "registration1";
+$db = "registration";
 // Connect to database.
 try {
     $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
@@ -38,7 +38,6 @@ try {
 catch(Exception $e){
     die(var_dump($e));
 }
-
 
 if(!empty($_POST)) {
 try {
@@ -60,7 +59,6 @@ catch(Exception $e) {
 echo "<h3>Your're registered!</h3>";
 }
 
-
 $sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
@@ -79,7 +77,6 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>No one is currently registered.</h3>";
 }
-
 
 ?>
 </body>
